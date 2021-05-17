@@ -35,7 +35,7 @@
 
     </table>
 <?php
-    <button type="button"><a href="src/Views/CreateMeeting.php"> Nueva Cita</a> </button>
+    <button type="button"a href="src/Views/CreateMeeting.php"> Nueva Cita</a> </button>
 ?>
 </div>
 </body>
