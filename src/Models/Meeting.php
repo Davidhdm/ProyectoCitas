@@ -27,7 +27,7 @@ class Meeting {
         $query = $this->connection->mysql->query($sql);
         $meetingArray = $query->fetchAll();
         $meetingList = [];
-        
+
         foreach($meetingArray as $meeting){
             $meetingItem = new Meeting ($meeting['id'], $meeting['coder'], $meeting['topic'], $meeting['mytime']);
             array_push($meetingList, $meetingItem);
@@ -40,8 +40,8 @@ class Meeting {
     
     public function insertItem()
     {
-        $sql = "INSERT INTO `meeting` VALUES ('$this->coder', '$this->topic' , '$this->mytime') ";
-        
+        $sql = "INSERT INTO `meeting` VALUES ('$this->coder', '$this->topic' , '$this->mytime')";
+        $this->connection->mysql->query($sql);
     }
 
 

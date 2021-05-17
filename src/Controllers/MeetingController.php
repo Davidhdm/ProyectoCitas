@@ -40,11 +40,9 @@ class MeetingController
         require_once 'src/views/MeetingList.php';
     }
 
-   
-
-    public function store()
+    public function store(array $request)
     {
-        $newMeeting = new Meeting($request);
+        $newMeeting = new Meeting($request['coder']);
         $newMeeting ->insertItem();
         $this ->index();
     }
