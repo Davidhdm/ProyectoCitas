@@ -26,7 +26,6 @@ class Meeting {
         $this->coder = $coder;
         $this->topic = $topic;
         $this->mytime = $mytime;
-        asdasdas
         
         $sql = "INSERT INTO meeting(coder, topic, mytime) VALUE(?,?,?)";
         $insert = $this->connection->prepare($sql);
