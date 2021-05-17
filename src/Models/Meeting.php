@@ -34,6 +34,16 @@ class Meeting {
         return $meetingArray;
     }
 
+
+    
+    public function insertItem()
+    {
+        $sql = "INSERT INTO `meeting` VALUES ('$this->coder', '$this->topic' , '$this->mytime') ";
+        
+    }
+
+
+
     /* public function insert($coder, $topic, $mytime) 
     {
         $this->coder = $coder;
