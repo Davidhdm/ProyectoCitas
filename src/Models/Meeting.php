@@ -13,7 +13,7 @@ class Meeting {
     
     private $connection;
 
-    public function __construct(int $id = null, string $coder = '', string $topic = '', string $mytime = null)
+    public function __construct(string $coder = '', string $topic = '', string $mytime = null, int $id = null)
     {
         $this->coder = $coder;
         $this->topic = $topic;
@@ -28,18 +28,19 @@ class Meeting {
         $meetingArray = $query->fetchAll();
         $meetingList = [];
         foreach($meetingArray as $meeting){
-            $meetingItem = new Meeting ($meeting['id'], $meeting['coder'], $meeting['topic'], $meeting['mytime']);
+            $meetingItem = new Meeting ( $meeting['coder'], $meeting['topic'], $meeting['mytime'],$meeting['id'],);
             array_push($meetingList, $meetingItem);
         }
         return $meetingArray;
     }
 
 
-    
+
     public function insertItem()
     {
-        $sql = "INSERT INTO `meeting` VALUES ('$this->coder', '$this->topic' , '$this->mytime') ";
-        
+        $sql = "INSERT INTO `meeting`(coder, topic) VALUES ('$this->coder', '$this->topic') ";
+        $this->connection->mysql->query($sql);
+      
     }
 
 

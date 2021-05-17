@@ -12,9 +12,8 @@
     <div class="container">
     
         <form action="?action=store" method="post">
-            <input type="text" name="coder" required>
-            <input type="text" name="topic" required>
-            <input type="text" name="mytime" required>
+            <input type="text" name="coder" required placeholder="Name">
+            <input type="text" name="topic" placeholder="Topic">
             <input type="submit" value="Crear nueva cita" >
             <input type="reset" value="Cancelar la cita">
             
