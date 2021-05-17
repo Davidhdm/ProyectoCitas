@@ -40,7 +40,7 @@ class MeetingController
         require_once 'src/views/MeetingList.php';
     }
 
-   
+
 
     public function store()
     {
