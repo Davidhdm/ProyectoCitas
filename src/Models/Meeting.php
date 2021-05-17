@@ -15,13 +15,26 @@ class Meeting {
 
     public function __construct(int $id = null, string $coder = '', string $topic = '', string $mytime = null)
     {
-        $this->coder;
-        $this->topic;
-        $this->mytime;
+        $this->coder = $coder;
+        $this->topic = $topic;
+        $this->mytime = $mytime;
         $this->connection = new Connection();
     }
 
-    public function insert($coder, $topic, $mytime) 
+    public function getList()
+    {
+        $sql = "SELECT * FROM `meeting`";
+        $query = $this->connection->mysql->query($sql);
+        $meetingArray = $query->fetchAll();
+        $meetingList = [];
+        foreach($meetingArray as $meeting){
+            $meetingItem = new Meeting ($meeting['id'], $meeting['coder'], $meeting['topic'], $meeting['mytime']);
+            array_push($meetingList, $meetingItem);
+        }
+        return $meetingArray;
+    }
+
+    /* public function insert($coder, $topic, $mytime) 
     {
         $this->coder = $coder;
         $this->topic = $topic;
@@ -34,14 +47,6 @@ class Meeting {
         $idInsert = $this->connection->lastInsertId();
         return $idInsert;
     
-    }
-
-    public function getList()
-    {
-        $sql = "SELECT * FROM meeting";
-        $execute = $this->connection->query($sql);
-        $request = $execute->fetchall(PDO::FETCH_ASSOC);
-        return $request;
     }
 
     public function update($id, $coder, $topic, $mytime)
@@ -73,8 +78,7 @@ class Meeting {
         $delete = $this->connection->prepare($sql);
         $resultDelete = $delete->execute($arrayWhere);
         return $resultDelete;
-    } 
+    } */
 
 
-}
-
+} 
