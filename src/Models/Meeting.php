@@ -15,9 +15,9 @@ class Meeting {
 
     public function __construct(string $coder = '', string $topic = '', string $mytime = null, int $id = null)
     {
-        $this->coder;
-        $this->topic;
-        $this->mytime;
+        $this->coder = $coder;
+        $this->topic = $topic;
+        $this->mytime = $mytime;
         $this->connection = new Connection();
     }
 
