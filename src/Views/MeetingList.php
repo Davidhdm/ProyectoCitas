@@ -11,34 +11,21 @@
 
 <div style="display:block">
     <table class="table table-striped">
-        <tr>
-            <th>Coder</th>
-            <th>Topic</th>
-            <th>DNI</th>
-            <th>Mytime</th>
-        </tr>
+       
+       <?php
         
-        <?php foreach($result as $data): ?>
-        <tr>
-            <td>
-                <?php echo $data['coder'] ?>
-            </td>
-            
-            <td>
-                <?php echo $data['topic'] ?>
-            </td>
-        
-        
-            <td> 
-                <?php echo $data['mytime'] ?>
-            </td>
-        </tr>
-        <?php endforeach ?>
+        foreach ($result as $data){
+            echo $data->getCoder();
+
+        }
+
+?>
+
 
     </table>
+    </div>
 
     <a href="?action=create"><button type="button"> Nueva Cita </button></a>
-    
     
 </body>
 </html>

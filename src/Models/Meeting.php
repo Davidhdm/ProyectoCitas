@@ -31,15 +31,34 @@ class Meeting {
             $meetingItem = new Meeting ( $meeting['coder'], $meeting['topic'], $meeting['mytime'],$meeting['id'],);
             array_push($meetingList, $meetingItem);
         }
-        return $meetingArray;
+        return $meetingList;
     }
+public function getCoder(){
 
+    return $this->coder;
+}
 
 
     public function insertItem()
     {
         $sql = "INSERT INTO `meeting`(coder, topic) VALUES ('$this->coder', '$this->topic') ";
         $this->connection->mysql->query($sql);
+    
+    }
+
+    public function delete(){
+
+        $sql = "DELETE FROM `meeting` WHERE `meeting`.`id`= {$this->id}";
+        $this->connection->mysql->query($sql);
+    }
+
+    
+    public function findById($id)
+    {
+        $query = $this->connection->mysql->query("SELECT * FROM `meeting` WHERE `id` = {$id}");
+        $result = $query->fetchAll();
+
+        return new Meeting($result[0]["coder"], $result[0]["topic"], $result[0]["mytime"] ,$result[0]["id"]);
     }
 
 

@@ -76,9 +76,12 @@ class MeetingController
         
     }
 
-    public function delete()
+    public function delete($id)
     {
-        
+        $findMeeting = new Meeting();
+        $deleteMeeting = $findMeeting-> findById($id);
+        $deleteMeeting-> delete();
+        $this->index();
     }
 }
 
