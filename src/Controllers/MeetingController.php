@@ -11,40 +11,53 @@ class MeetingController
     {
         if (isset($_GET["action"]) && ($_GET["action"] == "create")) {
             $this->create();
+            return;
         }
-
+        
         if (isset($_GET["action"]) && ($_GET["action"] == "store")) {
             $this->store($_POST);
+            return;
         }
 
         if (isset($_GET["action"]) && ($_GET["action"] == "edit")) {
             $this->edit($_GET["id"]);
+            return;
         }
 
         if (isset($_GET["action"]) && ($_GET["action"] == "update")) {
             $this->update($_POST, $_GET["id"]);
+            return;
         }
 
         if (isset($_GET["action"]) && ($_GET["action"] == "delete")) {
             $this->delete($_GET["id"]);
+            return;
         }
 
         $this->index();
     }
+
+
 
     public function index()
     {
         $meeting = new Meeting();
         $meetingList = $meeting->getList();
         $result = $meetingList;
-        require_once 'src/views/MeetingList.php';
+        require_once 'src/Views/MeetingList.php';
+
     }
 
-    public function store(array $request)
+    public function store(array $request): void
     {
-        $newMeeting = new Meeting($request['coder']);
-        $newMeeting ->insertItem();
-        $this ->index();
+        $newMeeting = new Meeting($request['coder'],$request['topic'] );
+        $newMeeting->insertItem();
+        $this->index();
+    }
+
+    public function create()
+    {
+        require_once 'src/Views/CreateMeeting.php';
     }
 
     public function edit()

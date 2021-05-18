@@ -14,6 +14,7 @@
         <tr>
             <th>Coder</th>
             <th>Topic</th>
+            <th>DNI</th>
             <th>Mytime</th>
         </tr>
         
@@ -27,7 +28,7 @@
                 <?php echo $data['topic'] ?>
             </td>
         
-            <td>
+            <td> 
                 <?php echo $data['mytime'] ?>
             </td>
         </tr>
@@ -35,8 +36,6 @@
 
     </table>
 
-    <button type="button"><a href="src/Views/CreateMeeting.php">Nueva Cita</a> </button>
-
-</div>
+    <a href="?action=create"><button type="button"> Nueva Cita </button></a>
 </body>
 </html>
