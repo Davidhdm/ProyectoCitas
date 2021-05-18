@@ -38,6 +38,7 @@
     </table>
 
     <a href="?action=create"><button type="button"> Nueva Cita </button></a>
+    <a href="?action=delete"><button type="button"> Borrar Cita </button></a>
      
     
 </body>

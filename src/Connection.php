@@ -3,6 +3,8 @@ namespace App;
 use PDO;
 use PDOException;
 
+ //do connect to DataBase
+
 class Connection{
 
     public $mysql; 
@@ -16,6 +18,8 @@ class Connection{
         }
     }
     
+
+   
     private function getConnection()
     {
         $host = "localhost";

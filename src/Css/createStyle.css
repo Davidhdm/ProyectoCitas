@@ -1,0 +1,41 @@
+body{
+    background-color:coral;
+    margin: 50px;
+}
+h1{
+    font-size: 100px;
+    text-align: center;
+    color: chocolate;
+}
+
+input{
+   color: coral;
+   font-size: 20px;
+   border: 2px solid chocolate;
+  
+}
+
+.insertData{
+    font-size: 100px;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 70px;
+    
+    
+}
+
+.btnData{
+    text-align: center;
+}
+
+.btnData input{
+    
+    text-align: center;
+    font-size: 40px;
+    border-radius: 25px;
+    color: chocolate;
+    margin-right: 60px;
+    border: 2px solid chocolate;
+
+    
+}

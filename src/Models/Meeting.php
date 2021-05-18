@@ -18,6 +18,7 @@ class Meeting {
         $this->coder = $coder;
         $this->topic = $topic;
         $this->mytime = $mytime;
+        $this->id = $id;
         $this->connection = new Connection();
     }
 

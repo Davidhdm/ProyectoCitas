@@ -49,7 +49,7 @@ class MeetingController
     }
 
    
-
+//anadir Item???Save new Item in story
     public function store(array $request): void
     {
         $newMeeting = new Meeting($request['coder'],$request['topic'] );
@@ -60,6 +60,15 @@ class MeetingController
         
         // echo "ajj";
     }
+
+    // public function delete(array $id)
+    // {
+    //     $meetHelper = new Meeting($id['coder'], $id['topic']);
+    //     $newMeeting = $meetHelper->findById($id);
+    //     $newMeeting->delete();
+
+    //     $this->index();
+    // }
 
     public function create()
     {
@@ -78,7 +87,7 @@ class MeetingController
 
     public function delete()
     {
-        
+   
     }
 }
 
