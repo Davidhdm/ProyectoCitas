@@ -48,7 +48,7 @@ class MeetingController
 
     }
 
-   
+
 
     public function store(array $request): void
     {

@@ -11,49 +11,19 @@
 
 <div style="display:block">
     <table class="table table-striped">
-        <tr>
-            <th>Coder</th>
-            <th>Topic</th>
-            <th>Mytime</th>
-        </tr>
+       
+       <?php
         
-        <?php
-        
-        echo $result [0]->getCoder();
-        foreach($result as $coder){
+        foreach ($result as $data){
+            echo $data->getCoder();
 
-
-
-        echo "
-
-
-        <tr> 
-            <td>
-            { $coder->getCoder()}
-            </td>
-            
-            <td>
-        
-            </td>
-        
-            <td> 
-        
-            </td>
-
-            <td> 
-            
-                
-            </td>
-
-
-        </tr>
-        ";
-        
         }
-        ?>
+
+?>
 
 
     </table>
+    </div>
 
     <a href="?action=create"><button type="button"> Nueva Cita </button></a>
     
