@@ -11,30 +11,32 @@
 
 <div style="display:block">
     <table class="table table-striped">
-        <tr>
+        <thead>
+            <th>ID</th>
             <th>Coder</th>
             <th>Topic</th>
-            <th>DNI</th>
-            <th>Mytime</th>
-        </tr>
+            <th>Created at</th>
+        </thead>
+        <tbody>
+        <?php
         
-        <?php foreach($result as $data): ?>
-        <tr>
-            <td>
-                <?php echo $data['coder'] ?>
-            </td>
-            
-            <td>
-                <?php echo $data['topic'] ?>
-            </td>
-        
-            <td> 
-                <?php echo $data['mytime'] ?>
-            </td>
-        </tr>
-        <?php endforeach ?>
+        foreach ($result as $data){
+            echo "<tr>
+                    <td>{$data->getId()}</td>
+                    <td>{$data->getCoder()}</td>
+                    <td>{$data->getTopic()}</td>
+                    <td>{$data->getTimeDate()}</td>
+                    <td>
+                        <a href='?action=edit'>Edit</a>
+                        <a href='?action=delete&id={$data->getId()}'>Delete</a>
+                    </td>
+                </tr>";  
+        }
 
+        ?>
+        </tbody>
     </table>
+    </div>
 
     <a href="?action=create"><button type="button"> Nueva Cita </button></a>
 </body>

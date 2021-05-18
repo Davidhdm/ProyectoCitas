@@ -37,22 +37,21 @@ class MeetingController
         $this->index();
     }
 
-
-
     public function index()
     {
         $meeting = new Meeting();
         $meetingList = $meeting->getList();
         $result = $meetingList;
         require_once 'src/Views/MeetingList.php';
-
     }
 
     public function store(array $request): void
     {
         $newMeeting = new Meeting($request['coder'],$request['topic'] );
         $newMeeting->insertItem();
+        
         $this->index();
+        header('location: index.php');
     }
 
     public function create()
@@ -70,9 +69,14 @@ class MeetingController
         
     }
 
-    public function delete()
+    public function delete($id)
     {
-        
+        $findMeeting = new Meeting();
+        $deleteMeeting = $findMeeting-> findById($id);
+        $deleteMeeting-> delete();
+
+        $this->index();
+        header('location: index.php');
     }
 }
 
