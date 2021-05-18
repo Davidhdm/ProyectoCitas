@@ -48,8 +48,13 @@ class MeetingController
 
     }
 
+<<<<<<< HEAD
    
 //anadir Item???Save new Item in story
+=======
+
+
+>>>>>>> a459e9b098ed24a1f6874772e99f2c061a3fe570
     public function store(array $request): void
     {
         $newMeeting = new Meeting($request['coder'],$request['topic'] );
@@ -85,9 +90,16 @@ class MeetingController
         
     }
 
-    public function delete()
+    public function delete($id)
     {
+<<<<<<< HEAD
    
+=======
+        $findMeeting = new Meeting();
+        $deleteMeeting = $findMeeting-> findById($id);
+        $deleteMeeting-> delete();
+        $this->index();
+>>>>>>> a459e9b098ed24a1f6874772e99f2c061a3fe570
     }
 }
 
