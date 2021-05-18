@@ -17,26 +17,45 @@
             <th>Mytime</th>
         </tr>
         
-        <?php foreach($result as $data): ?>
-        <tr>
+        <?php
+        
+        echo $result [0]->getCoder();
+        foreach($result as $coder){
+
+
+
+        echo "
+
+
+        <tr> 
             <td>
-                <?php echo $data['coder'] ?>
+            { $coder->getCoder()}
             </td>
             
             <td>
-                <?php echo $data['topic'] ?>
+        
             </td>
         
-            <td>
-                <?php echo $data['mytime'] ?>
+            <td> 
+        
             </td>
+
+            <td> 
+            
+                
+            </td>
+
+
         </tr>
-        <?php endforeach ?>
+        ";
+        
+        }
+        ?>
+
 
     </table>
-<?php
-    <button type="button"a href="src/Views/CreateMeeting.php"> Nueva Cita</a> </button>
-?>
-</div>
+
+    <a href="?action=create"><button type="button"> Nueva Cita </button></a>
+    
 </body>
 </html>
