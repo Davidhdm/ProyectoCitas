@@ -5,32 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="src/Css/meetingListStyle.css">
     <title>Meeting Lista</title>
 </head>
 <body>
-
-<div style="display:block">
-    <table class="table table-striped">
-       
-       <?php
+<h1>MeetingList</h1>
+<div class="container">
+    <table>
+        <thead class="thHead">
+            <th>ID</th>
+            <th>Coder</th>
+            <th>Topic</th>
+            <th>Created at</th>
+            <th></th>
+        </thead>
+        <tbody>
+        <?php
         
         foreach ($result as $data){
-            echo $data->getCoder();
-
+            echo "
+            
+                <tr>
+                    <td>{$data->getId()}</td>
+                    <td>{$data->getCoder()}</td>
+                    <td>{$data->getTopic()}</td>
+                    <td class='myTyme'>{$data->getTimeDate()}</td>
+                    <td>
+                    
+                    <a class='edit' href='?action=edit'> Edit </a>
+                    <a class='delete' href='?action=delete&id={$data->getId()}'>Delete</a>
+                    
+                        
+                    </td>
+                </tr>";  
         }
 
-?>
-
-
+        ?>
+        </tbody>
     </table>
     </div>
 
-    <a href="?action=create"><button type="button"> Nueva Cita </button></a>
-<<<<<<< HEAD
-    <a href="?action=delete"><button type="button"> Borrar Cita </button></a>
-     
-=======
->>>>>>> a459e9b098ed24a1f6874772e99f2c061a3fe570
+        <div class="btn">
+            <a class="create" href="?action=create" > Nueva Cita </button></a>
+            <a class="delete" href="?action=delete"> Borrar Cita </button></a>
+        </div>
     
+    
+
 </body>
 </html>

@@ -8,21 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-
-
-    <div class="container">
-    
+    <div class="container">    
         <form action="?action=store" method="post">
             <h1>Insert Your Date Here</h1>
             <div class="inputData">
             <div class="insertData">
                 <input type="text" name="coder" required placeholder="Name">
-                <input type="text" name="topic" placeholder="Topic">
-                <input type="text" name="dni" placeholder="DNI">
+                <input type="text" name="topic" required placeholder="Topic">
+                
             </div> 
             <div class="btnData">
-                <input  type="submit" value="Crear nueva cita Subbmit" >
-                <input  type="reset" value="Cancelar la citab reset">
+                <input  type="submit" value="Crear nueva cita" >
+                <input  type="reset"  value="Cancelar la cita">
             </div>
             
             </div>
@@ -31,7 +28,5 @@
 
         </form>
     </div>
-
-    
 </body>
 </html>

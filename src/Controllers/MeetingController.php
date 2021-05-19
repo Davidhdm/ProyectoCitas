@@ -37,7 +37,7 @@ class MeetingController
         $this->index();
     }
 
-
+    
 
     public function index()
     {
@@ -45,35 +45,18 @@ class MeetingController
         $meetingList = $meeting->getList();
         $result = $meetingList;
         require_once 'src/Views/MeetingList.php';
-
     }
 
-<<<<<<< HEAD
-   
-//anadir Item???Save new Item in story
-=======
 
-
->>>>>>> a459e9b098ed24a1f6874772e99f2c061a3fe570
     public function store(array $request): void
     {
         $newMeeting = new Meeting($request['coder'],$request['topic'] );
         $newMeeting->insertItem();
-        $this->index();
-        // $newMeeting = new Meeting($request['coder']);
-        // $newMeeting->insertItem();
         
-        // echo "ajj";
+        $this->index();
+        header('location: index.php');
     }
 
-    // public function delete(array $id)
-    // {
-    //     $meetHelper = new Meeting($id['coder'], $id['topic']);
-    //     $newMeeting = $meetHelper->findById($id);
-    //     $newMeeting->delete();
-
-    //     $this->index();
-    // }
 
     public function create()
     {
@@ -92,14 +75,12 @@ class MeetingController
 
     public function delete($id)
     {
-<<<<<<< HEAD
-   
-=======
+
         $findMeeting = new Meeting();
         $deleteMeeting = $findMeeting-> findById($id);
         $deleteMeeting-> delete();
         $this->index();
->>>>>>> a459e9b098ed24a1f6874772e99f2c061a3fe570
+
     }
 }
 

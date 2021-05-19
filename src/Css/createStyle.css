@@ -5,13 +5,14 @@ body{
 h1{
     font-size: 100px;
     text-align: center;
-    color: chocolate;
+    color: rgb(100, 50, 14);
 }
 
 input{
    color: coral;
    font-size: 20px;
    border: 2px solid chocolate;
+   
   
 }
 
@@ -20,8 +21,7 @@ input{
     text-align: center;
     margin-bottom: 100px;
     margin-top: 70px;
-    
-    
+  
 }
 
 .btnData{
@@ -36,6 +36,12 @@ input{
     color: chocolate;
     margin-right: 60px;
     border: 2px solid chocolate;
+    background-color: rgb(189, 158, 100);
+    cursor: pointer;
+}
 
-    
+.btnData input:hover{
+    opacity: .8;
+    color:floralwhite;
+
 }
