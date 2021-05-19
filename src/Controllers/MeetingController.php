@@ -63,9 +63,6 @@ class MeetingController
     {
         $meeting = new Meeting();
         $meetingEdit = $meeting->findById($id);
-        $meetingCoder = $meeting->getCoder();
-        $meetingTopic = $meeting->getTopic();
-        // $coder = $meetingLis;
         require_once 'src/Views/EditMeeting.php';
     }
 
@@ -73,7 +70,7 @@ class MeetingController
     {
         $updateMeeting = new Meeting();
         $findMeeting = $updateMeeting-> findById($id);
-        // $findMeeting->rename($request["coder"], $request["topic"]);
+        $findMeeting->rename($request["coder"], $request["topic"]);
         $findMeeting-> update();
 
         $this->index();
