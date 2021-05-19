@@ -27,7 +27,7 @@
                     <td>{$data->getTopic()}</td>
                     <td>{$data->getTimeDate()}</td>
                     <td>
-                        <a href='?action=edit'>Edit</a>
+                        <a href='?action=edit&id={$data->getId()}'>Edit</a>
                         <a href='?action=delete&id={$data->getId()}'>Delete</a>
                     </td>
                 </tr>";  
