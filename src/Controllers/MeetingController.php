@@ -63,10 +63,8 @@ class MeetingController
     {
         $meeting = new Meeting();
         $meetingEdit = $meeting->findById($id);
-        print_r($meetingEdit);
         $meetingCoder = $meeting->getCoder();
         $meetingTopic = $meeting->getTopic();
-        print_r("linea 67 del edit");
         // $coder = $meetingLis;
         require_once 'src/Views/EditMeeting.php';
     }
@@ -74,7 +72,6 @@ class MeetingController
     public function update(array $request, $id)
     {
         $updateMeeting = new Meeting();
-        print_r($id);
         $findMeeting = $updateMeeting-> findById($id);
         // $findMeeting->rename($request["coder"], $request["topic"]);
         $findMeeting-> update();

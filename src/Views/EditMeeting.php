@@ -9,7 +9,7 @@
 <body>
     <p>linea 10 del edit.php</p>
     <?php print_r($meetingEdit) ?>
-    <?php echo $meetingEdit["coder"]->getId() ?>
+    <?php echo $meetingEdit[0]->getId() ?>
     <div class="container">    
         <form action='?action=update&id=<?php echo $data["coder"]->getId() ?>' method="post">
             <input type="text" name="coder" required value="<?php echo $meetingCoder?>">
