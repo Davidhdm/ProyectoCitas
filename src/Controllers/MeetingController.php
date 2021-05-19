@@ -61,7 +61,7 @@ class MeetingController
 
     public function edit()
     {
-    
+        
     }
 
     public function update()
