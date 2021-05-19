@@ -63,6 +63,13 @@ class Meeting {
     
     }
 
+    public function update()
+    {
+        $sql = "UPDATE meeting SET `coder` = '{$this->coder}', `topic` = '{$this->topic}' WHERE `id` = {$this->id}";     
+        $this->connection->mysql->query($sql);
+        echo "hola";
+    }
+
     public function delete()
     {
         $sql = "DELETE FROM `meeting` WHERE `meeting`.`id`= {$this->id}";

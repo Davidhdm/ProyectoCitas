@@ -61,12 +61,20 @@ class MeetingController
 
     public function edit()
     {
-    
+        $meeting = new Meeting();
+        $meetingCoder = $meeting->getCoder();
+        $meetingTopic = $meeting->getTopic();
+        // $coder = $meetingLis;
+        require_once 'src/Views/EditMeeting.php';
     }
 
-    public function update()
+    public function update(array $request, $id)
     {
-        
+        $updateMeeting = new Meeting();
+        $findMeeting = $updateMeeting-> findById($id);
+        $findMeeting-> update();
+
+        $this->index();
     }
 
     public function delete($id)
