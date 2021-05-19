@@ -63,11 +63,17 @@ class Meeting {
     
     }
 
+    public function rename($coder, $topic)
+    {
+        $this->coder = $coder;
+        $this->topic = $topic;
+
+    }
+
     public function update()
     {
         $sql = "UPDATE meeting SET `coder` = '{$this->coder}', `topic` = '{$this->topic}' WHERE `id` = {$this->id}";     
         $this->connection->mysql->query($sql);
-        echo "hola";
     }
 
     public function delete()
@@ -87,7 +93,7 @@ class Meeting {
 
 
 
-    /* public function insert($coder, $topic, $mytime) 
+/*     public function insert($coder, $topic, $mytime) 
     {
         $this->coder = $coder;
         $this->topic = $topic;
@@ -100,6 +106,14 @@ class Meeting {
         $idInsert = $this->connection->lastInsertId();
         return $idInsert;
     
+    }
+
+    public function getList()
+    {
+        $sql = "SELECT * FROM meeting";
+        $execute = $this->connection->query($sql);
+        $request = $execute->fetchall(PDO::FETCH_ASSOC);
+        return $request;
     }
 
     public function update($id, $coder, $topic, $mytime)

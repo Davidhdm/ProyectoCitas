@@ -8,9 +8,9 @@
 </head>
 <body>
     <div class="container">    
-        <form action="?action=update" method="post">
-            <input type="text" name="coder" required placeholder="<?php echo $meetingCoder?>">
-            <input type="text" name="topic" placeholder="<?php echo $meetingTopic?>">
+        <form action='?action=update&id=<?php echo "{$meetingEdit->getId()}" ?>' method="post">
+            <input type="text" name="coder" required value="<?php echo "{$meetingEdit->getCoder()}"?>">
+            <input type="text" name="topic" required value="<?php echo "{$meetingEdit->getTopic()}"?>">
             <input type="submit" value="Editar cita" >
             <input type="reset" value="Cancelar edición">
         </form>
