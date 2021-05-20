@@ -34,8 +34,15 @@ class MeetingController
             return;
         }
 
+        if(isset($_GET["action"]) && ($_GET["action"]== "index")) {
+            $this->index();
+            return;
+        }
+
         $this->index();
     }
+
+    
 
     public function index()
     {
@@ -45,11 +52,11 @@ class MeetingController
         require_once 'src/Views/MeetingList.php';
     }
 
+
     public function store(array $request): void
     {
         $newMeeting = new Meeting($request['coder'],$request['topic'] );
         $newMeeting->insertItem();
-        
         $this->index();
         header('location: index.php');
     }
@@ -81,9 +88,8 @@ class MeetingController
         $findMeeting = new Meeting();
         $deleteMeeting = $findMeeting-> findById($id);
         $deleteMeeting-> delete();
-
         $this->index();
-        header('location: index.php');
+
     }
 }
 

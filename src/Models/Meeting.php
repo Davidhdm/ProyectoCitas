@@ -13,12 +13,13 @@ class Meeting {
     
     private $connection;
 
-    public function __construct(string $coder = '', string $topic = '', string $mytime = null, int $id = null)
+    public function __construct(string $coder = '', string $topic = '', string $mytime = '', int $id = NULL)
     {
-        $this->id = $id;
+        
         $this->coder = $coder;
         $this->topic = $topic;
         $this->mytime = $mytime;
+        $this->id = $id;
         $this->connection = new Connection();
     }
 
