@@ -68,10 +68,10 @@ class MeetingController
 
     public function update(array $request, $id)
     {
-        $updateMeeting = new Meeting();
-        $findMeeting = $updateMeeting-> findById($id);
-        $findMeeting->rename($request["coder"], $request["topic"]);
-        $findMeeting-> update();
+        $findMeeting = new Meeting();
+        $updateMeeting = $findMeeting-> findById($id);
+        $updateMeeting->rename($request["coder"], $request["topic"]);
+        $updateMeeting->update();
 
         $this->index();
     }
