@@ -29,8 +29,12 @@ Es posbible borrar o editar una cita ya existente, y de pedir una nueva cita.
 
 <img src="src/Resources/Img/README.md/DesktopView1.png">
 <img src="src/Resources/Img/README.md/DesktopView2.png">
-<img src="src/Resources/Img/README.md/MobileView1.png">
-<img src="src/Resources/Img/README.md/MobileView2.png">
+
+## Vista previa de móvil
+<div style="display:flex;">
+  <img src="src/Resources/Img/README.md/MobileView1.png">
+  <img src="src/Resources/Img/README.md/MobileView2.png">
+</div>
 
 ## Herramientas y tecnologías utilizadas
 
