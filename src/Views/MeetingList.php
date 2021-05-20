@@ -31,15 +31,11 @@
                     <td>{$data->getTopic()}</td>
                     <td class='myTyme'>{$data->getTimeDate()}</td>
                     <td>
-                    
-                    <a class='edit' href='?action=edit'> Edit </a>
-                    <a class='delete' href='?action=delete&id={$data->getId()}'>Delete</a>
-                    
-                        
+                        <a href='?action=edit&id={$data->getId()}'>Edit</a>
+                        <a href='?action=delete&id={$data->getId()}'>Delete</a>
                     </td>
                 </tr>";  
         }
-
         ?>
         </tbody>
     </table>
@@ -47,7 +43,7 @@
 
         <div class="btn">
             <a class="create" href="?action=create" > Nueva Cita </button></a>
-            <a class="delete" href="?action=delete"> Borrar Cita </button></a>
+            
         </div>
     
     

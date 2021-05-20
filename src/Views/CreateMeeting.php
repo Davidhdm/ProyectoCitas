@@ -18,8 +18,9 @@
                 
             </div> 
             <div class="btnData">
-                <input  type="submit" value="Crear nueva cita" >
-                <input  type="reset"  value="Cancelar la cita">
+                <input  type="submit" value="Create New Meeting" >
+                <input  type="reset"  value="Reset">
+                <button><a href="?action=index">Cancel Meeting</a></button>
             </div>
             
             </div>

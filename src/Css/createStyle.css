@@ -9,11 +9,10 @@ h1{
 }
 
 input{
-   color: coral;
-   font-size: 20px;
-   border: 2px solid chocolate;
-   
-  
+    color: coral;
+    font-size: 20px;
+    border: 2px solid chocolate;
+
 }
 
 .insertData{
@@ -21,7 +20,6 @@ input{
     text-align: center;
     margin-bottom: 100px;
     margin-top: 70px;
-  
 }
 
 .btnData{
@@ -33,7 +31,7 @@ input{
     text-align: center;
     font-size: 40px;
     border-radius: 25px;
-    color: chocolate;
+    color:rgb(219, 204, 200);
     margin-right: 60px;
     border: 2px solid chocolate;
     background-color: rgb(189, 158, 100);
