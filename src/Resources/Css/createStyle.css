@@ -19,6 +19,7 @@ h1 {
 header img {
     border-radius: 1000px;
     width: 50vw;
+    max-width: 250px;
 }
 
 div.insertData {
@@ -32,12 +33,14 @@ div.insertData {
 div.insertData input {
     width: 100%;
     margin: 5px;
+    max-width: 176px;
 }
 
 .btnData {
     display: flex;
     flex-direction: column;
     width: 50vw;
+    max-width: 180px;
     margin-left: auto;
     margin-right: auto;
     bottom: 5px;
@@ -53,4 +56,17 @@ div.insertData input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 1024px) {
+
+    div.insertData input {
+        max-width: 500px;
+    }
+
+    .btnData {
+        flex-direction: row;
+        justify-content: flex-start;
+        max-width: 500px;
+    }
 }

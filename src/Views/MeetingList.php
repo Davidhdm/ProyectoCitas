@@ -17,7 +17,6 @@
 
         <table class="table table-hover table-dark">
             <thead class="thHead">
-                <!-- <th class="">ID</th> -->
                 <th class="">Coder</th>
                 <th class="">Topic</th>
                 <th class="">Created at</th>
@@ -25,8 +24,8 @@
             </thead>
 
             <tbody>
-            <?php
-            
+
+            <?php            
             foreach ($result as $data){
                 echo "
                 
@@ -42,6 +41,7 @@
                     </tr>";  
             }
             ?>
+
             </tbody>
         </table>
 

@@ -19,8 +19,8 @@
         <form action='?action=update&id=<?php echo "{$meetingEdit->getId()}" ?>' method="post">
             <div class="inputData">
                 <div class="insertData">
-                    <input class="form-control mb-2 mt-2" type="text" name="coder" required value="<?php echo "{$meetingEdit->getCoder()}"?>">
-                    <input class="form-control mb-2 mt-2" type="text" name="topic" required value="<?php echo "{$meetingEdit->getTopic()}"?>">
+                    <input class="form-control mb-2 mt-2" type="text" name="coder" required placeholder="<?php echo "{$meetingEdit->getCoder()}"?>">
+                    <input class="form-control mb-2 mt-2" type="text" name="topic" required placeholder="<?php echo "{$meetingEdit->getTopic()}"?>">
                 </div>
 
                 <div class="btnData">
