@@ -10,8 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">    
-        
+    <div class="container">        
         <header>
             <img src="src/Resources/Img/calico_logo.png" alt="Logo Calico Electronico">
             <h1>Insert your data here</h1>
@@ -19,7 +18,6 @@
         
         <form action="?action=store" method="post">
             <div class="inputData">
-
                 <div class="insertData">
                     <input class="form-control mb-2 mt-2" type="text" name="coder" required placeholder="Name">
                     <input class="form-control mb-2 mt-2" type="text" name="topic" required placeholder="Topic">
@@ -29,12 +27,8 @@
                     <input class="create btn btn-success" type="submit" value="Create Meeting" >
                     <input class="btn btn-warning" type="reset"  value="Reset">
                     <a class="btn btn-danger" href="?action=index">Cancel Meeting</a>
-                </div>
-            
+                </div>            
             </div>
-            
-            
-
         </form>
     </div>
 </body>
