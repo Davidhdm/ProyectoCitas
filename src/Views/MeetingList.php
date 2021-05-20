@@ -33,7 +33,7 @@
                         
                         <td>{$data->getCoder()}</td>
                         <td>{$data->getTopic()}</td>
-                        <td class='myTyme'>{$data->getTimeDate()}</td>
+                        <td>{$data->getTimeDate()}</td>
                         <td>
                             <a class='btn btn-primary' href='?action=edit&id={$data->getId()}'>Edit</a>
                             <a class='btn btn-danger' href='?action=delete&id={$data->getId()}'>Delete</a>
