@@ -19,14 +19,20 @@ class Connection{
     }
     
 
-   
+
     private function getConnection()
     {
-        $host = "localhost";
+        $host = "eu-cdbr-west-01.cleardb.com";
+        $user = "b28289f4320a87";
+        $password = "4625dee7";
+        $database = "heroku_348df0dfb69122b";
+        $charset = "utf-8";
+
+        /* $host = "localhost";
         $user = "root";
         $password = "";
         $database = "coolders";
-        $charset = "utf-8";
+        $charset = "utf-8"; */
 
         $options = [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC];
         $pdo = new PDO("mysql:host={$host};dbname={$database};charset{$charset}", $user, $password, $options);
